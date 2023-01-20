@@ -111,7 +111,7 @@ resource partnercenter 'Microsoft.Resources/deployments@2021-04-01' = {
   }
 }
 
-resource publicIp 'Microsoft.Network/publicIPAddresses@2021-03-01' = if (publicIpNewOrExisting == 'new') {
+resource publicIp 'Microsoft.Network/publicIPAddresses' = if (publicIpNewOrExisting == 'new') {
   name: publicIpName
   sku: {
     name: publicIpSku
